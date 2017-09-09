@@ -1,0 +1,127 @@
+// footer
+footer {
+    position: relative;
+    background-color: $color-base;
+    color: $color-base-font;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-top: 2px solid rgba(0,0,0,.6);
+}
+
+.footer-class-buttons {
+    padding-right: 1em;
+    button {
+        margin-left: .8em;
+        padding: .4em 1em;
+    }
+}
+
+.footer-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    div {
+        margin-left: .5em;
+    }
+}
+
+.info {
+    font-size: 2em;
+    @include textHover;
+}
+
+/// info window
+.logoLink {
+    text-decoration: none;
+}
+
+.info-window {
+    max-width: em(550);
+    display: none;
+    visibility: hidden;
+    transform: scale(.95);
+    box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, .5);
+    transition: all .3s ease;
+    @include floatingWindow;
+}
+
+.info-window-on {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.info-title {
+    @include windowTitle;
+    line-height: 1.5em;
+    span {
+        position: absolute;
+        left: -9999px;
+    }
+}
+
+.info-greet {
+    @include windowBase;
+    a {
+        color: $color-base;
+        text-decoration-color: $color-base;
+        @include hover-underline;
+    }
+}
+
+.shortcuts {
+    background-color: #fff;
+    margin: 1em;
+    text-align: left;
+    max-height: 250px;
+    overflow: auto;
+    border: 1px solid $color-base;
+    padding: 0.5em;
+    overflow-x: hidden;
+}
+
+
+
+.shortcuts-title {
+    cursor:default;
+    text-align: center;
+    margin: 1em -2em;
+    font-style: italic;
+    border-radius: 5px 5px 0 0;
+    padding: 1em 0;
+    border-bottom: 1px solid $color-base;
+    border-top: 1px solid $color-base;
+    background: darken($color-base-font, 10%);
+}
+
+.shortcuts-title:first-child {
+    margin-top: -1em;
+    border-top: none;
+}
+
+.info-shared {
+    position: relative;
+}
+
+.info-shared:hover .tooltip-shared {
+    opacity: .8;
+}
+
+.tooltip-shared {
+    font-weight: 700;
+    pointer-events:none;
+    background: $color-base-font;
+    border: 1px solid $color-base;
+    border-radius: 5px;
+    font-size: .8em;
+    position: absolute;
+    top: -80px;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999;
+    padding: .4em;
+    opacity: 0;
+    transition: opacity .3s ease;
+}

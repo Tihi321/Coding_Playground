@@ -1,0 +1,68 @@
+/// media queries 
+@media screen and (max-width: 42em) {
+    .settings-window-base {
+        top: 9%;
+        width: em(410);
+        font-size: .8em;
+    }
+
+    .btn{
+        padding: .2em .4em;
+    }
+
+    .sub-menu-settings {
+
+        ul {
+            justify-content: space-between;
+        }
+
+        li {
+            padding: .1em;
+            margin: 0;
+        }
+    }
+
+    .color-palette-container {
+        font-size: .8em;
+    }
+
+    .color-palette-color {
+        button {
+
+            margin: .1em;
+        }
+    }
+    .color-title {
+        line-height: 1em;
+    }
+
+    .iframe-option-form {
+        padding: .1em;
+        margin: 0;
+        p {
+            margin: 0;
+        }
+    }
+
+
+    .info-window {
+        font-size: .8em;
+    }
+
+
+    .header-class {
+        font-size: .8em;
+        padding: 0;
+    }
+    .header-options-btn {
+        height: 3em;
+    }
+
+    .menu .small-sub {
+        top: 2.6em;
+    }
+
+    footer {
+        font-size: .8em;
+    }
+}

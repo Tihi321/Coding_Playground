@@ -1,0 +1,15 @@
+.inactive-btn {
+	@include button($color-base-red);
+}
+
+.active-btn{
+	@include button($color-base-green);
+}
+
+.active{
+	color:$color-base-green;
+}
+
+.active-svg-btn {
+	border-color:$color-base-green!important;
+}

@@ -1,0 +1,440 @@
+// section css
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 20%;
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.9);
+}
+
+.splitter{
+    color: rgba(0,0,0,.5);
+    position: relative;
+    background: #555555;
+    cursor: col-resize;
+    border: 1px solid currentColor;
+}
+
+.splitter-hidden{
+    visibility: hidden;
+    z-index: 999999;
+    position: absolute;
+}
+
+.right-col {
+    position: relative;
+    display: block;
+}
+
+.preview-title {
+    position: absolute;
+    z-index: -999;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.html {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    transition: flex 0.5s;
+}
+
+.css {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.5s;
+}
+
+.javascript {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.5s;
+}
+.widthTopSmall{
+    width: 100%;
+    height: 100%;
+}
+
+.widthTop{
+    width: 10%;
+    height: 100%;
+}
+.widthSide{
+    width: 100%;
+    height: 10%;
+}
+
+.title {
+    position: relative;
+    color: $color-base-font;
+    line-height: 1.8em;
+    height: 2em;
+    padding-left: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: $color-base;
+    h3 {
+        display: inline-block;
+        font-weight: bold;
+    }
+}
+
+.title_lighten {
+    background-color: lighten($color-base, 2%);
+}
+
+.run-code-small {
+    color: $color-base-font;
+    display: inline-block;
+    height: .8em;
+    width: .8em;
+    margin-left: 1em;
+    cursor: pointer;
+    &:hover {
+        color: $color-base-green;
+    }
+}
+
+.success-copied {
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    opacity: .5;
+    font-size: .8em;
+    z-index: 9;
+}
+
+.cm-color-palette {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 9;
+}
+
+.color-pal {
+    display: none;
+    width: 15px;
+    height: 15px;
+    opacity: .3;
+    transition: all .1s ease;
+}
+
+.color-pal:hover {
+    opacity: .9;
+    transform: scale(1.2);
+}
+
+iframe#live_update {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.copy {
+    font-size: .9em;
+    float: right;
+    padding-right: 5px;
+    padding-left: 5px;
+    @include textHover();
+}
+
+
+
+/// small menu
+.small-menu {
+    position: relative;
+    margin-right: .5em;
+}
+
+
+.toggle-small {
+    border: 0;
+    font-family: 'FontAwesome';
+    color: $color-base-font;
+    font-weight: 700;
+}
+
+.toggle-small.toggle-on:after {
+    content: "\f106";
+}
+
+.toggle-small:after {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 42px;
+    content: "\f107";
+    line-height: 1em;
+}
+
+
+
+.small-sub {
+    visibility: hidden;
+    width: 150px;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: $color-base-font;
+    color: #111;
+    font-weight: 400;
+    text-align: left;
+    padding: .5em 0 .5em 0;
+    border-radius: 3px;
+    text-transform: lowercase;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    transform: scale(.8);
+    transform-origin: top right;
+    transition: all 0.1s ease;
+    li {
+        cursor: pointer;
+        padding-left: .5em;
+
+        &:hover {
+            background-color: darken($color-base-font, 10%);
+        }
+    }
+}
+
+.small-sub-on {
+    visibility: visible;
+    opacity: .9;
+    transform: scale(1);
+}
+
+
+
+.multiple-files {
+    display: inline-block;
+    width: 40%;
+    select {
+        min-width: 100%;
+    }
+}
+
+.folderPlus {
+    display: block;
+    min-width: 200px;
+    margin: 5em auto;
+}
+
+.add-new-file-window {
+    display: none;
+    visibility: hidden;
+    transform: scale(.95);
+    width: em(300);
+    box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, .5);
+    transition: all .3s ease;
+    @include floatingWindow;
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+.add-new-file-window-on {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.confirm-box {
+    display: none;
+    width: em(300);
+    box-shadow: 2px 5px 8px 0 rgba(0, 0, 0, .5);
+    @include floatingWindow;
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+
+
+.tooltip {
+    position: relative;
+    &:after {
+        opacity: .5;
+        position: absolute;
+        content: "It is Tekken 2";
+        padding: 6px 10px;
+        font-size: .8em;
+        top: 1em;
+        left: 60%;
+        color: #555;
+        white-space: nowrap;
+        z-index: 2;
+        pointer-events: none;
+        background: none !important;
+    }
+}
+
+
+.innerbox {
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100%;
+    max-height: inherit;  
+    overflow: auto;
+    transition: all 0.5s;
+}
+
+
+// Codemirror
+.CodeMirror {
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+.breakpoints {
+    width: .8em;
+}
+
+.breakpoint {
+    color: $color-base-font;
+}
+
+
+.CodeMirror-linenumber {
+    font-size: .8em;
+}
+
+.inlet_slider {
+    width: 150px;
+    margin-left: 5px;
+    line-height: 0;
+}
+
+.inlet_slider .range {
+    line-height: 2em;
+    outline: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0px;
+}
+
+.cm-s-material.CodeMirror {
+    color: $color-base-font;
+}
+
+.inlet_clicker {
+    bottom: 20px;
+}
+
+.CodeMirror-hints {
+    opacity: .85;
+    -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
+    border: none;
+
+    background: $color-base-font;
+    font-size: 1.1em;
+    font-family: sans-serif;
+
+    max-height: 10em;
+    width: 300px;
+}
+
+.CodeMirror-hint {
+    color: $color-base;
+    cursor: pointer;
+}
+
+li.CodeMirror-hint-active {
+    background: darken($color-base-font, 10%);
+    color: darken($color-base, 10%);
+}
+
+ ::-webkit-scrollbar-button {
+    height: 3%;
+}
+
+ ::-webkit-scrollbar {
+    width: .5em;
+    background-color: lighten($color-base, 20%);
+}
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $color-base;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: lighten($color-base, 10%);
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    background: darken($color-base, 10%);
+}
+
+.CodeMirror-search-field {}
+
+.CodeMirror-search-label {
+    font-size: 1em;
+}
+
+.CodeMirror-widget {}
+
+.cm-palette-hint {
+    margin: 0 .2em;
+    letter-spacing: .5em;
+    border-radius: 25%;
+}
+
+
+// right col addons
+.iframe-width {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 50;
+    font-size: .8em;
+    padding: .2em .4em;
+    text-align: center;
+    bottom: 5px;
+    right: 10px;
+    color: #ffffff;
+    background: rgba(52, 52, 54, 0.7);
+    border-radius: 5px;
+}
+
+.iframe-ruler {
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    top: 0;
+    opacity: .5;
+    width: 100%;
+    height: 12px;
+    background: linen;
+    background-size: 100px 100%;
+    padding: 0;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(90deg, black 0, black 1%, transparent 1%), linear-gradient(180deg, #ffffff 50%, transparent 50%), linear-gradient(90deg, transparent 10%, black 10%, black 11%, transparent 11%, transparent 20%, black 20%, black 21%, transparent 21%, transparent 30%, black 30%, black 31%, transparent 31%, transparent 40%, black 40%, black 41%, transparent 41%, transparent 50%, black 50%, black 51%, transparent 51%, transparent 60%, black 60%, black 61%, transparent 61%, transparent 70%, black 70%, black 71%, transparent 71%, transparent 80%, black 80%, black 81%, transparent 81%, transparent 90%, black 90%, black 91%, transparent 91%);
+}
+
+
+/////  copy buttons hidden
+.copy-btn-hidden {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}

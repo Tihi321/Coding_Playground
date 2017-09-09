@@ -1,0 +1,24 @@
+// file containing configuration variables
+
+//
+//-- Config
+//
+
+// colors
+$color-base: #202020;
+$color-base-light: rgba(52, 52, 54, 1.0);
+$color-base-green: rgba(42,97,15,1.0);
+$color-base-red: rgb(110,9,0);
+
+$color-base-font: #C1C1C1;
+$color-border: darken($color-base-font,10%);
+// widths
+$site-width: 75em;
+
+// widths
+$smallest-width: 20em;
+$very-small-width: 30em;
+$small-width: 48em;
+$medium-width: 60em;
+$large-width: 75em;
+$very-large-width: 100em;
