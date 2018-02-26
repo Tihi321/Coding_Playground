@@ -121,7 +121,7 @@ gulp.task('images', function(){
 // copies html files on change
 gulp.task('copy', function(){
 	return gulp.src('src/*.html')
-	.pipe(gulp.dest('dist'))
+	.pipe(gulp.dest('docs'))
 	.pipe(browserSync.stream())
 });
 
@@ -178,7 +178,7 @@ gulp.task('script-min', function() {
 });
 
 
-gulp.task('watch', ['browserSync', 'css'], function(){
+gulp.task('default', ['browserSync', 'css'], function(){
 	gulp.watch('src/sass/**/*.scss', ['css']);
 	gulp.watch('src/*.html', ['copy']);
 	gulp.watch('src/js/*.js', ['scripts-min']);

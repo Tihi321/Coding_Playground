@@ -383,9 +383,9 @@ var startCommands = "";
 var startProjectNameFull = "";
 var startProjectName = "";
 var startSharedName = "";
-var addressUrl = document.URL.split('#');
+var addressUrl = document.URL.split('?');
 if (addressUrl.length > 1) {
-    startProjectNameFull = addressUrl[1].split('?');
+    startProjectNameFull = addressUrl[1].split('&');
 }
 if (startProjectNameFull.length > 1) {
     startCommands = startProjectNameFull[1].split('-');
