@@ -297,11 +297,12 @@ iframe#live_update {
 
 // Codemirror
 .CodeMirror {
+    font-family: 'Source Code Pro',Consolas,monospace;
     height: 100%;
     width: 100%;
 }
 .CodeMirror-sizer {
-    font-size: 1.4em;
+    font-size: 1.15em;
     line-height: 1.3em;
 }
 .breakpoints {
@@ -395,8 +396,6 @@ li.CodeMirror-hint-active {
 .CodeMirror-search-label {
     font-size: 1em;
 }
-
-.CodeMirror-widget {}
 
 .cm-palette-hint {
     margin: 0 .2em;
