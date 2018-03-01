@@ -388,7 +388,9 @@ li.CodeMirror-hint-active {
     background: darken($color-base, 10%);
 }
 
-.CodeMirror-search-field {}
+.CodeMirror-overlayscroll-vertical{
+    width: 10px;
+}
 
 .CodeMirror-search-label {
     font-size: 1em;
