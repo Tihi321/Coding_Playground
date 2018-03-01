@@ -209,7 +209,7 @@ $(layoutBtnBottom).on("click", function() {
 ///  font size and collumn size buttons
 
 $(fontSizeBtnNormal).on("click", function() {
-    $(".CodeMirror").css("font-size", fontSize + "px");
+    $(".CodeMirror-sizer").css("font-size", fontSize + "px");
     $(fontSizeBtnNormal).addClass("active-svg-btn");
     $(fontSizeBtn2x).removeClass("active-svg-btn");
     $(fontSizeBtn4x).removeClass("active-svg-btn");
@@ -219,7 +219,7 @@ $(fontSizeBtnNormal).on("click", function() {
 });
 
 $(fontSizeBtn2x).on("click", function() {
-    $(".CodeMirror").css("font-size", (fontSize + 2) + "px");
+    $(".CodeMirror-sizer").css("font-size", (fontSize + 2) + "px");
     $(fontSizeBtn2x).addClass("active-svg-btn");
     $(fontSizeBtnNormal).removeClass("active-svg-btn");
     $(fontSizeBtn4x).removeClass("active-svg-btn");
@@ -230,7 +230,7 @@ $(fontSizeBtn2x).on("click", function() {
 });
 
 $(fontSizeBtn4x).on("click", function() {
-    $(".CodeMirror").css("font-size", (fontSize + 4) + "px");
+    $(".CodeMirror-sizer").css("font-size", (fontSize + 4) + "px");
     $(fontSizeBtn4x).addClass("active-svg-btn");
     $(fontSizeBtn2x).removeClass("active-svg-btn");
     $(fontSizeBtnNormal).removeClass("active-svg-btn");

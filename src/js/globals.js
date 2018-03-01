@@ -306,7 +306,7 @@ cssObject.base = "";
 jsObject.master = "";
 
 // footer buttons variables
-var fontSize = 16;
+var fontSize = 18;
 var windowSizeToggle = 0;
 
 ////code at start
