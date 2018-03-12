@@ -3711,16 +3711,8 @@ function keydown(evt) {
         $(autoDisableBtn).click();
     } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 82) {
         updateIframe();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 76) {
-        $(layoutSettingsBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 66) {
-        $(cssSettingsBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 80) {
-        $(projectsSettingsBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 83) {
-        $(javascriptSettingsBtn).click();
     } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 88) {
-        $(exportSettingsBtn).click();
+        $(layoutSettingsBtn).click();
     } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 67) {
         $(exportCurrentProject).click();
     } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 68) {
