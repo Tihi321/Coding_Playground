@@ -35,84 +35,84 @@ function keydown(evt) {
 
     if (!evt){ evt = event;}
 
-    if (evt.ctrlKey && evt.altKey && evt.keyCode === 96) {
+    if (evt.shiftKey && evt.altKey && evt.keyCode === 96) {
         $(".ui-slider-handle").focus();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 49) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 49) {
         $(columnSizeBtnEmpty).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 50) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 50) {
         $(columnSizeBtnMin).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 51) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 51) {
         $(columnSizeBtnMid).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 52) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 52) {
         $(columnSizeBtnMax).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 53) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 53) {
         $(columnSizeBtnFull).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 107) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 107) {
         fontSizePlus();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 109) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 109) {
         fontSizeSmall();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 103) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 103) {
         $(htmlRemoveBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 104) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 104) {
         $(cssRemoveBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 105) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 105) {
         $(jsRemoveBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 100) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 100) {
         htmlReSize();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 101) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 101) {
         cssReSize();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 102) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 102) {
         jsReSize();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 55) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 55) {
         if (screenSize === 1) {
             layoutLeft();
         }
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 56) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 56) {
         if (screenSize === 1) {
             layoutTop();
         }
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 57) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 57) {
         if (screenSize === 1) {
             layoutRight();
         }
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 48) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 48) {
         if (screenSize === 1) {
             layoutBottom();
         }
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 87) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 87) {
         $(autoDisableBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 82) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 82) {
         updateIframe();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 88) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 88) {
         $(layoutSettingsBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 67) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 67) {
         $(exportCurrentProject).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 68) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 68) {
         $(addNewFileWindowBtn).click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 97) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 97) {
         htmlEditor.focus();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 98) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 98) {
         cssEditor.focus();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 99) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 99) {
         jsEditor.focus();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 78) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 78) {
         $('input[name=iframeWidth]').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 77) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 77) {
         $('input[name=iframeRuler]').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 74) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 74) {
         $('input[name=cmJsLint]').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 75) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 75) {
         $('input[name=cmCssLint]').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 70) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 70) {
         $("header").toggle();
         $("footer").toggle();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 72) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 72) {
         $('#outerWindowOpen').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 71) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 71) {
         $('#playCodeCss').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 84) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 84) {
         $('input[name=cmCPicker]').click();
-    } else if (evt.ctrlKey && evt.altKey && evt.keyCode === 89) {
+    } else if (evt.shiftKey && evt.altKey && evt.keyCode === 89) {
         $('input[name=cmInSlider]').click();
     }
 }

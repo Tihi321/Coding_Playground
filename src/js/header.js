@@ -219,7 +219,10 @@ $(autoDisableBtn).on("click", function() {
 // Button Run updates iframe from Codemirror text area
 
 $(runCodeBtn).on("click", function() {
-    updateIframe();
+    $("#live_update")[0].contentWindow.document.open();
+    $("#live_update")[0].contentWindow.document.write('<!DOCTYPE html><head><meta charset="UTF-8"></head><body><script>location.reload();</script></body></html>');
+    $("#live_update")[0].contentWindow.document.close();
+    setTimeout(function () { updateIframe(); }, 200);
 });
 
 
