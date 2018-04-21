@@ -37,13 +37,11 @@
 }
 
 @mixin button($color) {
-	color: #ccbfc5;
+	color: $color-base-font;
 	font-weight: bold;
     background-color: $color;
     padding: .3em .5em;
-    border-radius: 3px;
     transition: background-color 0.2s ease;
-    // @include hover-border(lighten($color, 20%));
     &:hover {
     	background-color: lighten($color, 10%);
     }
@@ -64,7 +62,7 @@
     border: 2px solid $color-base-light;
     opacity: .98;
     color: $color-base;
-    background-color: $color-base-font;
+    background-color: $color-base-floating;
 }
 
 @mixin windowTitle {

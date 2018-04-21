@@ -126,8 +126,8 @@ var mostUsedJs = [{
     name: "Jquery-UI 1.12",
     value: "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
 }, {
-    name: "Bodymovin 4.1",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.10.0/bodymovin.min.js"
+    name: "Bodymovin 4.13",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"
 }, {
     name: "Motionbump 0.1",
     value: "https://motionbumpcom.ipage.com/Subdomains/libraries/motionbump/js/mb.libs.min.js"
@@ -138,14 +138,11 @@ var mostUsedJs = [{
     name: "Backbone 1.3",
     value: "https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"
 }, {
-    name: "Bootstrap 4.0",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+    name: "Bootstrap 4.1",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"
 }, {
-    name: "Bootstrap-3.3",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
-}, {
-    name: "Ember 2.13",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.13.3/ember.min.js"
+    name: "Ember 2.18.2",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/ember.js/2.18.2/ember.min.js"
 }, {
     name: "Foundation 6.4",
     value: "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/js/foundation.min.js"
@@ -162,11 +159,11 @@ var mostUsedJs = [{
     name: "Polymer 0.5.6",
     value: "https://cdnjs.cloudflare.com/ajax/libs/polymer/0.5.6/polymer.min.js"
 }, {
-    name: "React 15.6",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"
+    name: "React 16.3.2",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/cjs/react.production.min.js"
 }, {
-    name: "React-dom 15.6",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"
+    name: "React-dom 16.3.2",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/cjs/react-dom.production.min.js"
 }, {
     name: "Snap.svg 0.5",
     value: "https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"
@@ -177,8 +174,8 @@ var mostUsedJs = [{
     name: "Underscore 1.8",
     value: "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
 }, {
-    name: "Vue 2.3.4",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"
+    name: "Vue 2.5.16",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"
 }, {
     name: "Zepto 1.2",
     value: "https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"
@@ -204,16 +201,16 @@ var mostUsedCss = [{
     name: "Jquery-UI",
     value: "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
 }, {
-    name: "Bootstrap 4.0",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    name: "Bootstrap 4.1",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css"
 }, {
-    name: "Bootstrap 3.3.7",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    name: "Bootstrap Reboot 4.1",
+    value: "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap-reboot.min.css"
 }, {
     name: "Foundation 6.3",
     value: "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css"
 }, {
-    name: "Animate.css 3.5",
+    name: "Animate.css 3.5.2",
     value: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
 }, {
     name: "Materialize 0.98",
@@ -437,6 +434,10 @@ for (var i = 0; i <= startCommands.length - 1; i++) {
             $("header").toggle();
             $("footer").toggle();
             commandsCodeSize = "preview";
+            break;
+        case "notopbar":
+            $("header").toggle();
+            $("footer").toggle();
             break;
         case "playcss":
             plaCssCodeStart = true;

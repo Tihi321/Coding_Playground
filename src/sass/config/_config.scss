@@ -6,12 +6,13 @@
 
 // colors
 $color-base: #202020;
-$color-base-light: rgba(52, 52, 54, 1.0);
-$color-base-green: rgba(42,97,15,1.0);
-$color-base-red: rgb(110,9,0);
+$color-base-light: #3D3D3D;
+$color-base-green: #27ae60;
+$color-base-red: #c0392b;
 
-$color-base-font: #C1C1C1;
-$color-border: darken($color-base-font,10%);
+$color-base-font: #fff;
+$color-base-floating: #C1C1C1;
+$color-border: darken($color-base-floating, 10%);
 // widths
 $site-width: 75em;
 
