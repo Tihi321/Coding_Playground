@@ -1043,7 +1043,7 @@ var jsEditor = CodeMirror.fromTextArea(document.getElementById("jsEditor"), {
     dragDrop: true,
     scrollbarStyle: "overlay",
     scrollPastEnd: true,
-    gutters: cmGutterOptions.lintNoBreak,
+    gutters: cmGutterOptions.noBreakLint,
     extraKeys: {
         "Ctrl-Space": "autocomplete",
         "Alt-F": "findPersistent",
@@ -1056,7 +1056,7 @@ var jsEditor = CodeMirror.fromTextArea(document.getElementById("jsEditor"), {
         }
     },
     paletteHints: true,
-    lint: true
+    lint: false
 });
 Inlet(jsEditor);
 
