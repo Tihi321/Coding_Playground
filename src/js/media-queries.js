@@ -55,10 +55,10 @@ function WidthChangeSmall(mqsmall) {
 
         if (startLayout) {
             if (commandsLayoutType === "") {
-                layoutRight();
+                layoutLeft();
             }
             if (commandsCodeSize === "") {
-                $(columnSizeBtnMid).click();
+                $(columnSizeBtnMin).click();
             }
             startLayout = false;
         } else if (commandsLayoutType === "") {
