@@ -98,10 +98,10 @@ var mostUsedJs = [{
     value: "https://cdnjs.cloudflare.com/ajax/libs/polymer/0.5.6/polymer.min.js"
 }, {
     name: "React 16.3.2",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/cjs/react.production.min.js"
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"
 }, {
     name: "React-dom 16.3.2",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/cjs/react-dom.production.min.js"
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"
 }, {
     name: "Snap.svg 0.5",
     value: "https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"

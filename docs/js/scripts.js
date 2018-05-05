@@ -160,10 +160,10 @@ var mostUsedJs = [{
     value: "https://cdnjs.cloudflare.com/ajax/libs/polymer/0.5.6/polymer.min.js"
 }, {
     name: "React 16.3.2",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/cjs/react.production.min.js"
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js"
 }, {
     name: "React-dom 16.3.2",
-    value: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/cjs/react-dom.production.min.js"
+    value: "https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js"
 }, {
     name: "Snap.svg 0.5",
     value: "https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"
@@ -1329,13 +1329,13 @@ function updateIframe() {
 
     if (jsPre === "Babel-2015") {
         babelJsVersion = "es2015";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     } else if (jsPre === "Babel-2016") {
         babelJsVersion = "es2016";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     } else if (jsPre === "Babel-2017") {
         babelJsVersion = "es2017";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     }
 
     // add libraries from array

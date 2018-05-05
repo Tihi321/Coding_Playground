@@ -56,13 +56,13 @@ function updateIframe() {
 
     if (jsPre === "Babel-2015") {
         babelJsVersion = "es2015";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     } else if (jsPre === "Babel-2016") {
         babelJsVersion = "es2016";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     } else if (jsPre === "Babel-2017") {
         babelJsVersion = "es2017";
-        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>";
+        stringJs = stringJs + "<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js'></script>";
     }
 
     // add libraries from array
