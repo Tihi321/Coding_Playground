@@ -2809,7 +2809,7 @@ $("#minFolderJsBtn").on("click", function() {
   }
 });
 
-$("#jsMoveUpCatBtn").on("click", function() {
+$("#jsMoveDownBtn").on("click", function() {
   $(".toggle-small").removeClass("toggle-on");
   $(".small-sub").removeClass(" small-sub-on");
 
@@ -2824,7 +2824,7 @@ $("#jsMoveUpCatBtn").on("click", function() {
   }
 });
 
-$("#jsMoveDownCatBtn").on("click", function() {
+$("#jsMoveUpBtn").on("click", function() {
   $(".toggle-small").removeClass("toggle-on");
   $(".small-sub").removeClass(" small-sub-on");
 
@@ -2853,7 +2853,7 @@ $("#minFolderCssBtn").on("click", function() {
   }
 });
 
-$("#cssMoveUpCatBtn").on("click", function() {
+$("#cssMoveDownBtn").on("click", function() {
   $(".toggle-small").removeClass("toggle-on");
   $(".small-sub").removeClass(" small-sub-on");
 
@@ -2868,7 +2868,7 @@ $("#cssMoveUpCatBtn").on("click", function() {
   }
 });
 
-$("#cssMoveDownCatBtn").on("click", function() {
+$("#cssMoveUpBtn").on("click", function() {
   $(".toggle-small").removeClass("toggle-on");
   $(".small-sub").removeClass(" small-sub-on");
   
