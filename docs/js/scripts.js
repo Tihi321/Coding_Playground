@@ -3400,16 +3400,11 @@ function populatePreprocessors(cssPre, jsPre){
 
 
 	if(jsPre === "Babel-2015"){
-		$('input[name=cmJsLint]').click();
 		selectPreJs.selectedIndex = 1;
 	}else if(jsPre === "Babel-2016"){
-		$('input[name=cmJsLint]').click();
 		selectPreJs.selectedIndex = 2;
 	}else if(jsPre === "Babel-2017"){
-		$('input[name=cmJsLint]').click();
 		selectPreJs.selectedIndex = 3;
-	}else if(!($('input[name=cmJsLint]').is(':checked'))){
-		$('input[name=cmJsLint]').click();
 	}
 }
 /////////			MEDIA QUERRIES            ////////////
