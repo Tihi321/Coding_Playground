@@ -2,673 +2,900 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Code | Web Interactive Playground | Html, Css, Javascript</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="copyright" content="Code is not registered trademark">
-    <meta name="description" content="Web interactive playground for Html, Css &amp; JavaScript code ">
-    <meta name="keywords" content="html,css,javascript,web interactive playground, web playground">
-    <meta name="robots" content="index,follow">
-    <meta name="DC.title" content="Web interactive playground for html, css &amp; javascript code">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <script type="application/javascript" src="https://use.fontawesome.com/755a15ef29.js"></script>
-    <link rel="shortcut icon" href="images/icon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/bundle.css">
-    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.6/sass.min.js"></script>
-    <script type="application/javascript" src="https://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js" async></script>
-    <script type="application/javascript" src="https://cdn.rawgit.com/CSSLint/csslint/master/dist/csslint.js" async></script>
-    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
-    <script type="application/javascript" src="js/libraries/codemirror/cmbundle.js"></script>
-    <script type="application/javascript" src="js/libraries/codemirror/cmbundle2.js"></script>
-    <script type="application/javascript" src="js/libraries/codemirror/javascripts/html-completion.js"></script>
-    <script type="application/javascript" src="js/libraries/codemirror/inlet.min2.js"></script>
-    <script type="application/javascript" src="https://cdn.rawgit.com/emmetio/codemirror/master/dist/emmet.js"></script>
-    <script type="application/javascript" src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js" async></script>
+  <meta charset="UTF-8">
+  <title>Code | Web Interactive Playground | Html, Css, Javascript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="copyright" content="Code is not registered trademark">
+  <meta name="description" content="Web interactive playground for Html, Css &amp; JavaScript code ">
+  <meta name="keywords" content="html,css,javascript,web interactive playground, web playground">
+  <meta name="robots" content="index,follow">
+  <meta name="DC.title" content="Web interactive playground for html, css &amp; javascript code">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <script type="application/javascript" src="https://use.fontawesome.com/755a15ef29.js"></script>
+  <link rel="shortcut icon" href="images/icon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/bundle.css">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.6/sass.min.js"></script>
+  <script type="application/javascript" src="https://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js" async></script>
+  <script type="application/javascript" src="https://cdn.rawgit.com/CSSLint/csslint/master/dist/csslint.js" async></script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.27.4/codemirror.min.js"></script>
+  <script type="application/javascript" src="js/libraries/codemirror/cmbundle.js"></script>
+  <script type="application/javascript" src="js/libraries/codemirror/cmbundle2.js"></script>
+  <script type="application/javascript" src="js/libraries/codemirror/javascripts/html-completion.js"></script>
+  <script type="application/javascript" src="js/libraries/codemirror/inlet.min2.js"></script>
+  <script type="application/javascript" src="https://cdn.rawgit.com/emmetio/codemirror/master/dist/emmet.js"></script>
+  <script type="application/javascript" src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js" async></script>
 </head>
 
 <body>
-    <div id="content" class="content">
-        <h1 class="title-message">Code Playground</h1>
-        <div id="floatingWindowBase" class="floating-window-base">
-            <section id="infoWindow" class="info-window">
-                <h2 class="info-title"><i aria-hidden="true" title="information" class="fa fa-info-circle"></i><span>Information window</span></h2>
-                <div class="info-greet">Shortcuts <br> ( <em>outside of iframe</em> )
-                    <div class="shortcuts">
-                        <div class="shortcuts-title">general
-                            <br> <strong>shift + alt + </strong>
-                        </div>
-                        <strong>num0</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> layout resize with keyboard arrows
-                        <br> <strong>num1 - num3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> set focus to html, css or js editor
-                        <br> <strong>num4 - num6</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> html, css, js size preset
-                        <br> <strong>num7 - num9</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> html, css, js on off
-                        <br> <strong>1 - 5</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> layout size presets
-                        <br> <strong>7 - 0</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> left, top, right, bottom view
-                        <br> <strong>num+</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> font size presets
-                        <br> <strong>num-</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> font size presets
-                        <br> <strong>w</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> autoupdate
-                        <br> <strong>r</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> update frame
-                        <br> <strong>x</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> settings
-                        <br> <strong>d</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add new file
-                        <br> <strong>c</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> export current project
-                        <br> <strong>m</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> iframe ruler
-                        <br> <strong>n</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> iframe width meter (click to swap <strong>px <i class="fa fa-arrows-h" aria-hidden="true"></i> em</strong>)
-                        <br> <strong>j</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Js Lint
-                        <br> <strong>k</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Css Lint
-                        <br> <strong>t</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> inlet color picker
-                        <br> <strong>y</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> inlet slider
-                        <br> <strong>g</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> run/stop css code player
-                        <br> <strong>h</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> preview window
-                        <br> <strong>f</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> full screen (no header &amp; footer)
-                        <br> <strong>f11</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> codemirror editor full screen
-                        <br>
-                        <div class="shortcuts-title">emmet
-                        </div>
-                        <strong>Tab</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> expand abbreviation
-                        <br> <strong>Shift + Ctrl + a</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> wrap with abbreviation
-                        <br> <strong>Ctrl + q</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> fold
-                        <br> <strong>Ctrl + Alt + Right</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> next edit point
-                        <br> <strong>Ctrl + Alt + Left</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> previous edit point
-                        <br> <strong>Shift + Ctrl + y</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> evaluate math expression
-                        <br> <strong>Ctrl + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 1
-                        <br> <strong>Ctrl + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 1
-                        <br> <strong>Ctrl + Alt + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 0.1
-                        <br> <strong>Ctrl + Alt + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 0.1
-                        <br> <strong>Shift + Ctrl + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 10
-                        <br> <strong>Shift + Ctrl + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 10
-                        <br> <strong>Ctrl + b</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> reflect CSS value
-                        <div class="shortcuts-title">search
-                        </div>
-                        <strong>Ctrl + f</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> start searching
-                        <br> <strong>Ctrl + g</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find next
-                        <br> <strong>Shift + Ctrl + g</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find previous
-                        <br> <strong>Shift + Ctrl + f</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace
-                        <br> <strong>Shift + Ctrl + r</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace all
-                        <br> <strong>Alt + f</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Persistent search (dialog doesn't autoclose, enter to find next, <strong>Shift + Enter</strong> to find previous)
-                        <br> <strong>Alt + g</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> jump to line
+  <div id="content" class="content">
+    <h1 class="title-message">Code Playground</h1>
+    <div id="floatingWindowBase" class="floating-window-base">
+      <section id="infoWindow" class="info-window">
+        <h2 class="info-title">
+          <i aria-hidden="true" title="information" class="fa fa-info-circle"></i>
+          <span>Information window</span>
+        </h2>
+        <div class="info-greet">Shortcuts
+          <br> (
+          <em>outside of iframe</em> )
+          <div class="shortcuts">
+            <div class="shortcuts-title">general
+              <br>
+              <strong>shift + alt + </strong>
+            </div>
+            <strong>num0</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> layout resize with keyboard arrows
+            <br>
+            <strong>num1 - num3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> set focus to html, css or js editor
+            <br>
+            <strong>num4 - num6</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> html, css, js size preset
+            <br>
+            <strong>num7 - num9</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> html, css, js on off
+            <br>
+            <strong>1 - 5</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> layout size presets
+            <br>
+            <strong>7 - 0</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> left, top, right, bottom view
+            <br>
+            <strong>num+</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> font size presets
+            <br>
+            <strong>num-</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> font size presets
+            <br>
+            <strong>w</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> autoupdate
+            <br>
+            <strong>r</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> update frame
+            <br>
+            <strong>x</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> settings
+            <br>
+            <strong>d</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add new file
+            <br>
+            <strong>c</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> export current project
+            <br>
+            <strong>m</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> iframe ruler
+            <br>
+            <strong>n</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> iframe width meter (click to swap
+            <strong>px
+              <i class="fa fa-arrows-h" aria-hidden="true"></i> em</strong>)
+            <br>
+            <strong>j</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Js Lint
+            <br>
+            <strong>k</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Css Lint
+            <br>
+            <strong>t</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> inlet color picker
+            <br>
+            <strong>y</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> inlet slider
+            <br>
+            <strong>g</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> run/stop css code player
+            <br>
+            <strong>h</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> preview window
+            <br>
+            <strong>f</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> full screen (no header &amp; footer)
+            <br>
+            <strong>f11</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> codemirror editor full screen
+            <br>
+            <div class="shortcuts-title">emmet
+            </div>
+            <strong>Tab</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> expand abbreviation
+            <br>
+            <strong>Shift + Ctrl + a</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> wrap with abbreviation
+            <br>
+            <strong>Ctrl + q</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> fold
+            <br>
+            <strong>Ctrl + Alt + Right</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> next edit point
+            <br>
+            <strong>Ctrl + Alt + Left</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> previous edit point
+            <br>
+            <strong>Shift + Ctrl + y</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> evaluate math expression
+            <br>
+            <strong>Ctrl + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 1
+            <br>
+            <strong>Ctrl + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 1
+            <br>
+            <strong>Ctrl + Alt + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 0.1
+            <br>
+            <strong>Ctrl + Alt + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 0.1
+            <br>
+            <strong>Shift + Ctrl + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> increment number by 10
+            <br>
+            <strong>Shift + Ctrl + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> decrement number by 10
+            <br>
+            <strong>Ctrl + b</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> reflect CSS value
+            <div class="shortcuts-title">search
+            </div>
+            <strong>Ctrl + f</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> start searching
+            <br>
+            <strong>Ctrl + g</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find next
+            <br>
+            <strong>Shift + Ctrl + g</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find previous
+            <br>
+            <strong>Shift + Ctrl + f</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace
+            <br>
+            <strong>Shift + Ctrl + r</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace all
+            <br>
+            <strong>Alt + f</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Persistent search (dialog doesn't autoclose, enter to find next,
+            <strong>Shift + Enter</strong> to find previous)
+            <br>
+            <strong>Alt + g</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> jump to line
 
-                        <div class="shortcuts-title">sublime
-                        </div>
-                        <strong>Ctrl + q</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> wrap lines
-                        <br> <strong>Ctrl + d</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select next occurrence
-                        <br> <strong>Alt + Left</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go subword left
-                        <br> <strong>Alt + Right</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go subword right
-                        <br> <strong>Ctrl + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> scroll up
-                        <br> <strong>Ctrl + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> scroll down
-                        <br> <strong>Shift + Ctrl + l</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> split selection by line
-                        <br> <strong>Shift + Tab</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> indent less
-                        <br> <strong>Shift + Ctrl + l</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> split selection by line
-                        <br> <strong>Ctrl + l</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select line
-                        <br> <strong>Shift + Ctrl + k</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line
-                        <br> <strong>Ctrl + Enter</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> insert line after
-                        <br> <strong>Shift + Ctrl + Enter</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> insert line before
-                        <br> <strong>Alt + Ctrl + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add cursor to prev line
-                        <br> <strong>Alt + Ctrl + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add cursor to next line
-                        <br> <strong>Shift + Ctrl + Space</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select scope
-                        <br> <strong>Shift + Ctrl + m</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select between brackets
-                        <br> <strong>Ctrl + m</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go to bracket
-                        <br> <strong>Shift + Ctrl + Up</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap line up
-                        <br> <strong>Shift + Ctrl + Down</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap line down
-                        <br> <strong>Ctrl + /</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> toggle comment
-                        <br> <strong>Ctrl + j</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> join lines
-                        <br> <strong>Alt + j</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> join all lines                        
-                        <br> <strong>Shift + Ctrl + d</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> duplicate lines
-                        <br> <strong>F9</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> sort lines
-                        <br> <strong>Ctrl + F9</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> sort lines insensitive
-                        <br> <strong>F2</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> next bookmark
-                        <br> <strong>Shift + F2</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> prev bookmark
-                        <br> <strong>Ctrl + F2</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> toggle bookmark
-                        <br> <strong>Shift + Ctrl + F2</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> clear bookmarks
-                        <br> <strong>Alt + F2</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select bookmarks
-                        <br> <strong>Ctrl + k Ctrl + Space</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> set sublime bookmark
-                        <br> <strong>Ctrl + k Ctrl + a</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select to sublime bookmark
-                        <br> <strong>Ctrl + k Ctrl + x</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap with sublime bookmark
-                        <br> <strong>Ctrl + k Ctrl + g</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> clear sublime bookmarks
-                        <br> <strong>Shift + Ctrl + &#91;</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> fold
-                        <br> <strong>Shift + Ctrl + &#93;</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> unfold
-                        <br> <strong>Ctrl + k Ctrl + j</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> unfold all
-                        <br> <strong>Ctrl + k Ctrl + k</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line right
-                        <br> <strong>Ctrl + k Ctrl + Backspace</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line left
-                        <br> <strong>Ctrl + k Ctrl + u</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> upcase at cursor
-                        <br> <strong>Ctrl + k Ctrl + l</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> downcase at cursor
-                        <br> <strong>Ctrl + k Ctrl + c</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> show in center
-                        <br> <strong>Shift + Ctrl + F3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find over
-                        <br> <strong>Ctrl + F3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find under
-                        <br> <strong>Alt + F3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find under all
-                        <br> <strong>Ctrl + h</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace
-                        <br> <strong>F3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find next
-                        <br> <strong>Shift + F3</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find prev
-                        <div class="shortcuts-title info-shared">URL
-                        <div id="infoShared" class="tooltip-shared"></div>
-                        </div>
-                        <em>www.webaddress.com</em>/?p=<strong>project_name</strong>&amp;<strong>keyword</strong>-<strong>keyword</strong>
-                        <br>
-                        <br><strong>keywords</strong> <i class="fa fa-long-arrow-right" aria-hidden="true"></i> <em>fullscreen, preview, notopbar, min, right, left, top, bottom, nohtml, nocss, nojs, htmlonly, cssonly, jsonly, playcss, play</em>
-                    </div>
-                    <br><strong>Tihomir Selak</strong>
-                    <br><em><a href="https://tihomir-selak.from.hr/" target="_blank">www.tihomir-selak.from.hr</a></em>
-                    <br>
-                </div>
-                <button class="close-btn-window close-btn-base btn">close</button>
-            </section>
-            <section id="addFileWindow" class="add-new-file-window">
-                <header class="windows-title-base">
-                    <h2>
-                    <label for="addFolder">New Category</label></h2>
-                </header>
-                <div class="window-body-base">
-                    <form class="no-autosubmit clearfix">
-                        <input class="input-name-base" id="addFolder" type="text" name="addFolder">
-                        <button id="addFiles" class="right btn">Add</button>
-                        <button id="jsFolder" class="left btn active-btn">JS</button>
-                        <button id="cssFolder" class="left btn">CSS</button>
-                    </form>
-                </div>
-                <button class="close-btn-window close-btn-base btn">close</button>
-            </section>
-            <section id="confirmBox" class="confirm-box">
-                <header class="windows-title-base">
-                    <h2>Are you sure</h2>
-                </header>
-                <div class="window-body-base">
-                    <div class="flex-container">
-                        <button id="yesDelete" class="btn inactive-btn">Yes</button>
-                        <button id="noDelete" class="btn">No</button>
-                    </div>
-                </div>
-            </section>
-            <section id="settingsPopWindow" class="settings-window-base">
-                <h2 class="windows-title-base">Settings
-                </h2>
-                <div class="window-body-base">
-                    <nav class="sub-menu-settings">
-                        <h3>main menu</h3>
-                        <ul>
-                            <li id="subMenuLayout"><a href="#layoutSettingsWrapper">Layout</a></li>
-                            <li id="subMenuLibraries"><a href="#layoutSettingsWrapper">CSS</a></li>
-                            <li id="subMenuSave"><a href="#layoutSettingsWrapper">JavaScript</a></li>
-                            <li id="subMenuProjects"><a href="#layoutSettingsWrapper">Projects</a></li>
-                            <li id="subMenuExport"><a href="#layoutSettingsWrapper">Export</a></li>
-                        </ul>
-                    </nav>
-                    <div id="layoutSettingsWrapper" class="layout-settings-wrapper">
-                        <div class="layoutButWrapper">
-                            <button id="btnLayout-l" class="svg-btn-layout">
-                            </button>
-                            <button id="btnLayout-t" class="svg-btn-layout">
-                            </button>
-                            <button id="btnLayout-r" class="svg-btn-layout">
-                            </button>
-                            <button id="btnLayout-b" class="svg-btn-layout">
-                            </button>
-                        </div>
-                        <div class="lang-btn-wrapper">
-                            <button id="htmlButRemove" class="btn">HTML
-                            </button>
-                            <button id="cssButRemove" class="btn">CSS
-                            </button>
-                            <button id="jsButRemove" class="btn">JS
-                            </button>
-                        </div>
-                        <div class="font-col-size">
-                            <div class="font-size">
-                                <button id="fontNormal" class="font-col-size-normal">a</button>
-                                <button id="font2x" class="font-col-size-2x">a-2x</button>
-                                <button id="font4x" class="font-col-size-4x">a-4x</button>
-                            </div>
-                            <div class="column-size">
-                                <button id="collMinFull" class="column-btn-base">
-                                </button>
-                                <button id="colMin" class="column-btn-base col-min">
-                                </button>
-                                <button id="colMid" class="column-btn-base col-mid">
-                                </button>
-                                <button id="colMax" class="column-btn-base col-max">
-                                </button>
-                                <button id="colMaxFull" class="column-btn-base col-full">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="title-settings-base title-settings-base-tools">
-                            <h3>Tools</h3>
-                            <div class="flex-container">
-                                <button id="iframeRulerBtn" class="btn">Ruler</button>
-                                <button id="iframeWidthBtn" class="btn">Width</button>
-                                <button id="outerWindowOpen" class="btn">Preview</button>
-                            </div>
-                        </div>
-                        <form class="no-autosubmit iframe-option-form">
-                            <fieldset>
-                                <legend>
-                                    <h3>Codemirror</h3></legend>
-                                <p>
-                                    <input type="checkbox" name="cmCPicker" id="cmCPicker">
-                                    <label for="cmCPicker">Color Wheel</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" name="cmInSlider" id="cmInSlider">
-                                    <label for="cmInSlider">Slider</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" name="cmBreakGutt" id="cmBreakGutt">
-                                    <label for="cmBreakGutt">Breakpoints</label>
-                                </p>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div id="cssSettingsWrapper" class="css-settings-wrapper">
-                        <div class="flex-container">
-                            <div class="title-settings-base">
-                                <h3>Preprocessor</h3>
-                                <select id="preCssSelect" class="select-options-base">
-                                    <option value="empty" selected>None</option>
-                                    <option value="scss">SCSS</option>
-                                    <option value="sass">SASS</option>
-                                </select>
-                            </div>
-                            <div class="title-settings-base">
-                                <h3>Quick Add</h3>
-                                <select id="cssLibraries" class="select-options-base">
-                                </select>
-                                <button id="addCssLibrary" class="btn">Add</button>
-                            </div>
-                        </div>
-                        <div class="flex-container">
-                            <form class="no-autosubmit title-settings-base clearfix">
-                                <h3>
-                                    <label for="libTextareaCss">External CSS</label>
-                                </h3>
-                                <input id="libTextareaCss">
-                                <button id="addExternalCssLibrary" class="btn">Add</button>
-                            </form>
-                            <div class="title-settings-base">
-                                <h3>Used</h3>
-                                <select id="cssLibsUsed" class="select-options-base"></select>
-                                <button id="removeCssLibrary" class="btn">Remove</button>
-                            </div>
-                        </div>
-                        <form class="no-autosubmit iframe-option-form">
-                            <fieldset>
-                                <legend>
-                                    <h3>Swatches</h3></legend>
-                                <div class="color-palette-container">
-                                    <div class="color-palette-color">
-                                        <div class="color-title">
-                                            <label for="colorOneActivate">Color 1</label>
-                                            <input type="checkbox" name="colorOneActivate" id="colorOneActivate">
-                                        </div>
-                                        <input id="colorOne" type="text" name="colorOne">
-                                        <button id="updateColorOne" class="btn">Update</button>
-                                    </div>
-                                    <div class="color-palette-color">
-                                        <div class="color-title">
-                                            <label for="colorTwoActivate">Color 2</label>
-                                            <input type="checkbox" name="colorTwoActivate" id="colorTwoActivate">
-                                        </div>
-                                        <input id="colorTwo" type="text" name="colorTwo">
-                                        <button id="updateColorTwo" class="btn">Update</button>
-                                    </div>
-                                    <div class="color-palette-color">
-                                        <div class="color-title">
-                                            <label for="colorThreeActivate">Color 3</label>
-                                            <input type="checkbox" name="colorThreeActivate" id="colorThreeActivate">
-                                        </div>
-                                        <input id="colorThree" type="text" name="colorThree">
-                                        <button id="updateColorThree" class="btn">Update</button>
-                                    </div>
-                                    <div class="color-palette-color">
-                                        <div class="color-title">
-                                            <label for="colorFourActivate">Color 4</label>
-                                            <input type="checkbox" name="colorFourActivate" id="colorFourActivate">
-                                        </div>
-                                        <input id="colorFour" type="text" name="colorFour">
-                                        <button id="updateColorFour" class="btn">Update</button>
-                                    </div>
-                                    <div class="color-palette-color">
-                                        <div class="color-title">
-                                            <label for="colorFiveActivate">Color 5</label>
-                                            <input type="checkbox" name="colorFiveActivate" id="colorFiveActivate">
-                                        </div>
-                                        <input id="colorFive" type="text" name="colorFive">
-                                        <button id="updateColorFive" class="btn">Update</button>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                        <form class="no-autosubmit iframe-option-form">
-                            <fieldset>
-                                <legend>
-                                    <h3>Codemirror</h3></legend>
-                                <p>
-                                    <input type="checkbox" name="cmCssLint" id="cmCssLint" checked>
-                                    <label for="cmCssLint">CSS Lint</label>
-                                </p>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div id="jsSettingsWrapper" class="js-settings-wrapper">
-                        <div class="flex-container">
-                            <div class="title-settings-base">
-                                <h3>Preprocessor</h3>
-                                <select id="preJsSelect" class="select-options-base">
-                                    <option value="empty" selected>None</option>
-                                    <option value="babel-2016">Babel 2015</option>
-                                    <option value="babel-2016">Babel 2016</option>
-                                    <option value="babel-2016">Babel 2017</option>
-                                </select>
-                            </div>
-                            <div class="title-settings-base">
-                                <h3>Quick Add</h3>
-                                <select id="jsLibraries" class="select-options-base">
-                                </select>
-                                <button id="addJsLibrary" class="btn">Add</button>
-                            </div>
-                        </div>
-                        <div class="flex-container">
-                            <form class="no-autosubmit title-settings-base clearfix">
-                                <h3>
-                                    <label for="libTextareaJs">External Js</label>
-                                </h3>
-                                <input id="libTextareaJs">
-                                <button id="addExternalJsLibrary" class="btn">Add</button>
-                            </form>
-                            <div class="title-settings-base">
-                                <h3>Used</h3>
-                                <select id="jsLibsUsed" class="select-options-base">
-                                </select>
-                                <button id="removeJsLibrary" class="btn">Remove</button>
-                            </div>
-                        </div>
-                        <div class="title-settings-base">
-                            <h3>Load Type</h3>
-                            <select id="loadTypeSelect" class="select-options-base">
-                                <option value="inhead">No wrap - in &#60;head&#62;</option>
-                                <option value="inbody" selected>No wrap - in &#60;body&#62;</option>
-                            </select>
-                        </div>
-                        <form class="iframe-option-form">
-                            <fieldset>
-                                <legend>
-                                    <h3>Codemirror</h3></legend>
-                                <p>
-                                    <input type="checkbox" name="cmJsLint" id="cmJsLint">
-                                    <label for="cmJsLint">JS Lint</label>
-                                </p>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div id="projectsSettingsWrapper" class="projects-settings-wrapper">
-                        <div class="flex-container">
-                            <div class="title-settings-base">
-                                <h3>Snippets</h3>
-                                <select id="importSnippetSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="importSnippetFiles" class="btn">Import</button>
-                                </div>
-                            </div>
-                            <div class="title-settings-base">
-                                <h3>Tools</h3>
-                                <select id="importToolsSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="importToolFiles" class="btn">Import</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-container">
-                            <div class="title-settings-base">
-                                <h3>Templates</h3>
-                                <select id="loadTemplateSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="loadTemplateFiles" class="btn">Load</button>
-                                </div>
-                            </div>
-                            <div class="title-settings-base">
-                                <h3>Portfolio</h3>
-                                <select id="loadProjectSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="loadProjectFiles" class="btn">Load</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="exportSettingsWrapper" class="export-settings-wrapper">
-                        <form class="no-autosubmit save-name-base clearfix">
-                            <h3>
-                                <label for="saveName">Name</label>
-                            </h3>
-                            <input id="saveName" type="text" name="saveName">
-                            <button id="saveFiles" class="btn">Save</button>
-                        </form>
-                        <div class="flex-container">
-                            <div class="title-settings-base">
-                                <h3>Load</h3>
-                                <select id="loadSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="loadFiles" class="btn">Load</button>
-                                    <button id="importLoadFiles" class="btn">Import</button>
-                                    <button id="deleteFiles" class="btn inactive-btn">Delete</button>
-                                </div>
-                            </div>
-                            <div class="title-settings-base">
-                                <h3>Import</h3>
-                                <select id="loadImportSelect" class="select-options-base">
-                                </select>
-                                <div class="flex-container">
-                                    <button id="loadImportedFiles" class="btn">Load Import</button>
-                                </div>
-                            </div>
-                        </div>
-                        <textarea id="importTextarea" class="import-texarea"></textarea>
-                        <div class="flex-container">
-                            <button id="importProjectFiles" class="btn">Import</button>
-                            <button id="exportOneProjectFiles" class="btn">Export</button>
-                            <button id="exportProjectFiles" class="btn">Export All</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="close-btn-window close-btn-base btn">close</button>
-            </section>
+            <div class="shortcuts-title">sublime
+            </div>
+            <strong>Ctrl + q</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> wrap lines
+            <br>
+            <strong>Ctrl + d</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select next occurrence
+            <br>
+            <strong>Alt + Left</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go subword left
+            <br>
+            <strong>Alt + Right</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go subword right
+            <br>
+            <strong>Ctrl + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> scroll up
+            <br>
+            <strong>Ctrl + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> scroll down
+            <br>
+            <strong>Shift + Ctrl + l</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> split selection by line
+            <br>
+            <strong>Shift + Tab</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> indent less
+            <br>
+            <strong>Shift + Ctrl + l</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> split selection by line
+            <br>
+            <strong>Ctrl + l</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select line
+            <br>
+            <strong>Shift + Ctrl + k</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line
+            <br>
+            <strong>Ctrl + Enter</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> insert line after
+            <br>
+            <strong>Shift + Ctrl + Enter</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> insert line before
+            <br>
+            <strong>Alt + Ctrl + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add cursor to prev line
+            <br>
+            <strong>Alt + Ctrl + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> add cursor to next line
+            <br>
+            <strong>Shift + Ctrl + Space</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select scope
+            <br>
+            <strong>Shift + Ctrl + m</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select between brackets
+            <br>
+            <strong>Ctrl + m</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> go to bracket
+            <br>
+            <strong>Shift + Ctrl + Up</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap line up
+            <br>
+            <strong>Shift + Ctrl + Down</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap line down
+            <br>
+            <strong>Ctrl + /</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> toggle comment
+            <br>
+            <strong>Ctrl + j</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> join lines
+            <br>
+            <strong>Alt + j</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> join all lines
+            <br>
+            <strong>Shift + Ctrl + d</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> duplicate lines
+            <br>
+            <strong>F9</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> sort lines
+            <br>
+            <strong>Ctrl + F9</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> sort lines insensitive
+            <br>
+            <strong>F2</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> next bookmark
+            <br>
+            <strong>Shift + F2</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> prev bookmark
+            <br>
+            <strong>Ctrl + F2</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> toggle bookmark
+            <br>
+            <strong>Shift + Ctrl + F2</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> clear bookmarks
+            <br>
+            <strong>Alt + F2</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select bookmarks
+            <br>
+            <strong>Ctrl + k Ctrl + Space</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> set sublime bookmark
+            <br>
+            <strong>Ctrl + k Ctrl + a</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> select to sublime bookmark
+            <br>
+            <strong>Ctrl + k Ctrl + x</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> swap with sublime bookmark
+            <br>
+            <strong>Ctrl + k Ctrl + g</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> clear sublime bookmarks
+            <br>
+            <strong>Shift + Ctrl + &#91;</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> fold
+            <br>
+            <strong>Shift + Ctrl + &#93;</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> unfold
+            <br>
+            <strong>Ctrl + k Ctrl + j</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> unfold all
+            <br>
+            <strong>Ctrl + k Ctrl + k</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line right
+            <br>
+            <strong>Ctrl + k Ctrl + Backspace</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> remove line left
+            <br>
+            <strong>Ctrl + k Ctrl + u</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> upcase at cursor
+            <br>
+            <strong>Ctrl + k Ctrl + l</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> downcase at cursor
+            <br>
+            <strong>Ctrl + k Ctrl + c</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> show in center
+            <br>
+            <strong>Shift + Ctrl + F3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find over
+            <br>
+            <strong>Ctrl + F3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find under
+            <br>
+            <strong>Alt + F3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find under all
+            <br>
+            <strong>Ctrl + h</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> replace
+            <br>
+            <strong>F3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find next
+            <br>
+            <strong>Shift + F3</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i> find prev
+            <div class="shortcuts-title info-shared">URL
+              <div id="infoShared" class="tooltip-shared"></div>
+            </div>
+            <em>www.webaddress.com</em>/?p=
+            <strong>project_name</strong>&amp;
+            <strong>keyword</strong>-
+            <strong>keyword</strong>
+            <br>
+            <br>
+            <strong>keywords</strong>
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            <em>fullscreen, preview, notopbar, min, right, left, top, bottom, nohtml, nocss, nojs, htmlonly, cssonly, jsonly,
+              playcss, play</em>
+          </div>
+          <br>
+          <strong>Tihomir Selak</strong>
+          <br>
+          <em>
+            <a href="https://tihomir-selak.from.hr/" target="_blank">www.tihomir-selak.from.hr</a>
+          </em>
+          <br>
         </div>
-        <header class="header-class">
-            <div class="left-header-btns">
-                <a class="logo" href="">
-                    </a>
-                <button id="autoUpdate" class="inactive-btn">Auto</button>
-                <button class="fa fa-play fa-2x run-code btn">
-                </button>
-            </div>
-            <nav class="menu">
-                <h3>Go to main menu</h3>
-                <ul>
-                    <li>
-                        <button id="main-menu" class="btn">
-                            <span class="toggle-small">
-                                <span class="settings-title">Settings</span>
-                            </span>
-                        </button>
-                        <ul class="small-sub">
-                            <li id="layoutSettingsBtn">
-                                Layout
-                            </li>
-                            <li id="cssSettingsBtn">
-                                Css
-                            </li>
-                            <li id="javascriptSettingsBtn">
-                                Javascript
-                            </li>
-                            <li id="projectsSettingsBtn">
-                                Projects
-                            </li>
-                            <li id="exportSettingsBtn">
-                                Export
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+        <button class="close-btn-window close-btn-base btn">close</button>
+      </section>
+      <section id="addFileWindow" class="add-new-file-window">
+        <header class="windows-title-base">
+          <h2>
+            <label for="addFolder">New Category</label>
+          </h2>
         </header>
-        <main class="wrapper">
-            <div class="left-col">
-                <section class="html">
-                    <div id="htmlTitle" class="title">
-                        <div id="copyButtonHtml" class="copy-btn-hidden"></div>
-                        <h3 class="left">HTML</h3>
-                        <div id="copiedHtml" class="success-copied">Succesfully Copied</div>
-                        <ul class="small-menu right">
-                            <li>
-                                <span>
-                                    <button class="toggle-small btn"></button>
-                                </span>
-                                <ul class="small-sub">
-                                    <li id="copyHtml">
-                                        Copy
-                                    </li>
-                                    <li id="formatHtmlCode">
-                                        Format Code
-                                    </li>
-                                    <li class="full-screen">
-                                        Full Screen
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <form class="innerbox">
-                        <textarea id="htmlEditor" name="code" placeholder=""></textarea>
-                    </form>
-                </section>
-                <section class="css">
-                    <div id="cssTitle" class="title">
-                        <div id="copyButtonCss" class="copy-btn-hidden"></div>
-                        <div id="CMColorHidOne" class="copy-btn-hidden"></div>
-                        <div id="CMColorHidTwo" class="copy-btn-hidden"></div>
-                        <div id="CMColorHidThree" class="copy-btn-hidden"></div>
-                        <div id="CMColorHidFour" class="copy-btn-hidden"></div>
-                        <div id="CMColorHidFive" class="copy-btn-hidden"></div>
-                        <h3 class="left">CSS</h3>
-                        <div class="multiple-files">
-                            <select id="optionCssFiles">
-                                <option value="base">base</option>
-                            </select>
-                        </div>
-                        <div id="copiedCSS" class="success-copied">Succesfully Copied</div>
-                        <div id="CMColorPalette" class="cm-color-palette">
-                            <div id="CMColorPaletteOne" class="color-pal"></div>
-                            <div id="CMColorPaletteTwo" class="color-pal"></div>
-                            <div id="CMColorPaletteThree" class="color-pal"></div>
-                            <div id="CMColorPaletteFour" class="color-pal"></div>
-                            <div id="CMColorPaletteFive" class="color-pal"></div>
-                        </div>
-                        <ul class="small-menu right">
-                            <li>
-                                <span>
-                                    <button class="toggle-small btn"></button>
-                                </span>
-                                <ul class="small-sub">
-                                    <li id="copyCss">
-                                        Copy
-                                    </li>
-                                    <li id="playCodeCss" class="play-code">
-                                        Play
-                                    </li>
-                                    <li class="add-new-file">
-                                        new category
-                                    </li>
-                                    <li id="minFolderCssBtn">
-                                        remove category
-                                    </li>
-                                    <li id="formatCssCode">
-                                        Format Code
-                                    </li>
-                                    <li class="full-screen">
-                                        Full Screen
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <form class="innerbox">
-                        <textarea id="cssEditor" name="code" placeholder=""></textarea>
-                    </form>
-                </section>
-                <section class="javascript">
-                    <div id="jsTitle" class="title">
-                        <div id="copyButtonJs" class="copy-btn-hidden"></div>
-                        <div class="left">
-                            <h3>JS</h3>
-                            <button class="fa fa-play run-code run-code-small">
-                            </button>
-                        </div>
-                        <div class="multiple-files">
-                            <select id="optionJsFiles">
-                                <option value="master">master</option>
-                            </select>
-                        </div>
-                        <div id="copiedJs" class="success-copied">Succesfully Copied</div>
-                        <ul class="small-menu right">
-                            <li>
-                                <span>
-                                    <button class="toggle-small btn"></button>
-                                </span>
-                                <ul class="small-sub">
-                                    <li id="copyJs">
-                                        Copy
-                                    </li>
-                                    <li class="add-new-file">
-                                        new category
-                                    </li>
-                                    <li id="minFolderJsBtn">
-                                        remove category
-                                    </li>
-                                    <li id="formatJsCode">
-                                        Format Code
-                                    </li>
-                                    <li class="full-screen">
-                                        Full Screen
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <form class="innerbox">
-                        <textarea id="jsEditor" name="code" placeholder=""></textarea>
-                    </form>
-                </section>
+        <div class="window-body-base">
+          <form class="no-autosubmit clearfix">
+            <input class="input-name-base" id="addFolder" type="text" name="addFolder">
+            <button id="addFiles" class="right btn">Add</button>
+            <button id="jsFolder" class="left btn active-btn">JS</button>
+            <button id="cssFolder" class="left btn">CSS</button>
+          </form>
+        </div>
+        <button class="close-btn-window close-btn-base btn">close</button>
+      </section>
+      <section id="confirmBox" class="confirm-box">
+        <header class="windows-title-base">
+          <h2>Are you sure</h2>
+        </header>
+        <div class="window-body-base">
+          <div class="flex-container">
+            <button id="yesDelete" class="btn inactive-btn">Yes</button>
+            <button id="noDelete" class="btn">No</button>
+          </div>
+        </div>
+      </section>
+      <section id="settingsPopWindow" class="settings-window-base">
+        <h2 class="windows-title-base">Settings
+        </h2>
+        <div class="window-body-base">
+          <nav class="sub-menu-settings">
+            <h3>main menu</h3>
+            <ul>
+              <li id="subMenuLayout">
+                <a href="#layoutSettingsWrapper">Layout</a>
+              </li>
+              <li id="subMenuLibraries">
+                <a href="#layoutSettingsWrapper">CSS</a>
+              </li>
+              <li id="subMenuSave">
+                <a href="#layoutSettingsWrapper">JavaScript</a>
+              </li>
+              <li id="subMenuProjects">
+                <a href="#layoutSettingsWrapper">Projects</a>
+              </li>
+              <li id="subMenuExport">
+                <a href="#layoutSettingsWrapper">Export</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="layoutSettingsWrapper" class="layout-settings-wrapper">
+            <div class="layoutButWrapper">
+              <button id="btnLayout-l" class="svg-btn-layout">
+              </button>
+              <button id="btnLayout-t" class="svg-btn-layout">
+              </button>
+              <button id="btnLayout-r" class="svg-btn-layout">
+              </button>
+              <button id="btnLayout-b" class="svg-btn-layout">
+              </button>
             </div>
-            <div id="splitter" class="splitter">
-                <dis id="splitterHidden" class="splitter-hidden"></dis>
+            <div class="lang-btn-wrapper">
+              <button id="htmlButRemove" class="btn">HTML
+              </button>
+              <button id="cssButRemove" class="btn">CSS
+              </button>
+              <button id="jsButRemove" class="btn">JS
+              </button>
             </div>
-            <aside id="right-col" class="right-col">
-                <h3 class="preview-title">Preview</h3>
-                <div id="iframeRuler" class="iframe-ruler"></div>
-                <div id="iframeWidth" class="iframe-width"></div>
-                <iframe id="live_update"></iframe>
-            </aside>
-        </main>
-        <footer>
-            <div class="footer-info">
-                <div id="infoWindowBtn" aria-label="Go to information window" class="fa fa-info-circle fa-2x info">
+            <div class="font-col-size">
+              <div class="font-size">
+                <button id="fontNormal" class="font-col-size-normal">a</button>
+                <button id="font2x" class="font-col-size-2x">a-2x</button>
+                <button id="font4x" class="font-col-size-4x">a-4x</button>
+              </div>
+              <div class="column-size">
+                <button id="collMinFull" class="column-btn-base">
+                </button>
+                <button id="colMin" class="column-btn-base col-min">
+                </button>
+                <button id="colMid" class="column-btn-base col-mid">
+                </button>
+                <button id="colMax" class="column-btn-base col-max">
+                </button>
+                <button id="colMaxFull" class="column-btn-base col-full">
+                </button>
+              </div>
+            </div>
+            <div class="title-settings-base title-settings-base-tools">
+              <h3>Tools</h3>
+              <div class="flex-container">
+                <button id="iframeRulerBtn" class="btn">Ruler</button>
+                <button id="iframeWidthBtn" class="btn">Width</button>
+                <button id="outerWindowOpen" class="btn">Preview</button>
+              </div>
+            </div>
+            <form class="no-autosubmit iframe-option-form">
+              <fieldset>
+                <legend>
+                  <h3>Codemirror</h3>
+                </legend>
+                <p>
+                  <input type="checkbox" name="cmCPicker" id="cmCPicker">
+                  <label for="cmCPicker">Color Wheel</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="cmInSlider" id="cmInSlider">
+                  <label for="cmInSlider">Slider</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="cmBreakGutt" id="cmBreakGutt">
+                  <label for="cmBreakGutt">Breakpoints</label>
+                </p>
+              </fieldset>
+            </form>
+          </div>
+          <div id="cssSettingsWrapper" class="css-settings-wrapper">
+            <div class="flex-container">
+              <div class="title-settings-base">
+                <h3>Preprocessor</h3>
+                <select id="preCssSelect" class="select-options-base">
+                  <option value="empty" selected>None</option>
+                  <option value="scss">SCSS</option>
+                  <option value="sass">SASS</option>
+                </select>
+              </div>
+              <div class="title-settings-base">
+                <h3>Quick Add</h3>
+                <select id="cssLibraries" class="select-options-base">
+                </select>
+                <button id="addCssLibrary" class="btn">Add</button>
+              </div>
+            </div>
+            <div class="flex-container">
+              <form class="no-autosubmit title-settings-base clearfix">
+                <h3>
+                  <label for="libTextareaCss">External CSS</label>
+                </h3>
+                <input id="libTextareaCss">
+                <button id="addExternalCssLibrary" class="btn">Add</button>
+              </form>
+              <div class="title-settings-base">
+                <h3>Used</h3>
+                <select id="cssLibsUsed" class="select-options-base"></select>
+                <button id="removeCssLibrary" class="btn">Remove</button>
+              </div>
+            </div>
+            <form class="no-autosubmit iframe-option-form">
+              <fieldset>
+                <legend>
+                  <h3>Swatches</h3>
+                </legend>
+                <div class="color-palette-container">
+                  <div class="color-palette-color">
+                    <div class="color-title">
+                      <label for="colorOneActivate">Color 1</label>
+                      <input type="checkbox" name="colorOneActivate" id="colorOneActivate">
+                    </div>
+                    <input id="colorOne" type="text" name="colorOne">
+                    <button id="updateColorOne" class="btn">Update</button>
+                  </div>
+                  <div class="color-palette-color">
+                    <div class="color-title">
+                      <label for="colorTwoActivate">Color 2</label>
+                      <input type="checkbox" name="colorTwoActivate" id="colorTwoActivate">
+                    </div>
+                    <input id="colorTwo" type="text" name="colorTwo">
+                    <button id="updateColorTwo" class="btn">Update</button>
+                  </div>
+                  <div class="color-palette-color">
+                    <div class="color-title">
+                      <label for="colorThreeActivate">Color 3</label>
+                      <input type="checkbox" name="colorThreeActivate" id="colorThreeActivate">
+                    </div>
+                    <input id="colorThree" type="text" name="colorThree">
+                    <button id="updateColorThree" class="btn">Update</button>
+                  </div>
+                  <div class="color-palette-color">
+                    <div class="color-title">
+                      <label for="colorFourActivate">Color 4</label>
+                      <input type="checkbox" name="colorFourActivate" id="colorFourActivate">
+                    </div>
+                    <input id="colorFour" type="text" name="colorFour">
+                    <button id="updateColorFour" class="btn">Update</button>
+                  </div>
+                  <div class="color-palette-color">
+                    <div class="color-title">
+                      <label for="colorFiveActivate">Color 5</label>
+                      <input type="checkbox" name="colorFiveActivate" id="colorFiveActivate">
+                    </div>
+                    <input id="colorFive" type="text" name="colorFive">
+                    <button id="updateColorFive" class="btn">Update</button>
+                  </div>
                 </div>
+              </fieldset>
+            </form>
+            <form class="no-autosubmit iframe-option-form">
+              <fieldset>
+                <legend>
+                  <h3>Codemirror</h3>
+                </legend>
+                <p>
+                  <input type="checkbox" name="cmCssLint" id="cmCssLint" checked>
+                  <label for="cmCssLint">CSS Lint</label>
+                </p>
+              </fieldset>
+            </form>
+          </div>
+          <div id="jsSettingsWrapper" class="js-settings-wrapper">
+            <div class="flex-container">
+              <div class="title-settings-base">
+                <h3>Preprocessor</h3>
+                <select id="preJsSelect" class="select-options-base">
+                  <option value="empty" selected>None</option>
+                  <option value="babel-2016">Babel 2015</option>
+                  <option value="babel-2016">Babel 2016</option>
+                  <option value="babel-2016">Babel 2017</option>
+                </select>
+              </div>
+              <div class="title-settings-base">
+                <h3>Quick Add</h3>
+                <select id="jsLibraries" class="select-options-base">
+                </select>
+                <button id="addJsLibrary" class="btn">Add</button>
+              </div>
             </div>
-            <div class="footer-class-buttons">
-                <button id="htmlBut" class="btn">Html</button>
-                <button id="cssBut" class="btn">Css</button>
-                <button id="javascriptBut" class="btn">JS</button>
+            <div class="flex-container">
+              <form class="no-autosubmit title-settings-base clearfix">
+                <h3>
+                  <label for="libTextareaJs">External Js</label>
+                </h3>
+                <input id="libTextareaJs">
+                <button id="addExternalJsLibrary" class="btn">Add</button>
+              </form>
+              <div class="title-settings-base">
+                <h3>Used</h3>
+                <select id="jsLibsUsed" class="select-options-base">
+                </select>
+                <button id="removeJsLibrary" class="btn">Remove</button>
+              </div>
             </div>
-        </footer>
+            <div class="title-settings-base">
+              <h3>Load Type</h3>
+              <select id="loadTypeSelect" class="select-options-base">
+                <option value="inhead">No wrap - in &#60;head&#62;</option>
+                <option value="inbody" selected>No wrap - in &#60;body&#62;</option>
+              </select>
+            </div>
+            <form class="iframe-option-form">
+              <fieldset>
+                <legend>
+                  <h3>Codemirror</h3>
+                </legend>
+                <p>
+                  <input type="checkbox" name="cmJsLint" id="cmJsLint">
+                  <label for="cmJsLint">JS Lint</label>
+                </p>
+              </fieldset>
+            </form>
+          </div>
+          <div id="projectsSettingsWrapper" class="projects-settings-wrapper">
+            <div class="flex-container">
+              <div class="title-settings-base">
+                <h3>Snippets</h3>
+                <select id="importSnippetSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="importSnippetFiles" class="btn">Import</button>
+                </div>
+              </div>
+              <div class="title-settings-base">
+                <h3>Tools</h3>
+                <select id="importToolsSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="importToolFiles" class="btn">Import</button>
+                </div>
+              </div>
+            </div>
+            <div class="flex-container">
+              <div class="title-settings-base">
+                <h3>Templates</h3>
+                <select id="loadTemplateSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="loadTemplateFiles" class="btn">Load</button>
+                </div>
+              </div>
+              <div class="title-settings-base">
+                <h3>Portfolio</h3>
+                <select id="loadProjectSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="loadProjectFiles" class="btn">Load</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="exportSettingsWrapper" class="export-settings-wrapper">
+            <form class="no-autosubmit save-name-base clearfix">
+              <h3>
+                <label for="saveName">Name</label>
+              </h3>
+              <input id="saveName" type="text" name="saveName">
+              <button id="saveFiles" class="btn">Save</button>
+            </form>
+            <div class="flex-container">
+              <div class="title-settings-base">
+                <h3>Load</h3>
+                <select id="loadSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="loadFiles" class="btn">Load</button>
+                  <button id="importLoadFiles" class="btn">Import</button>
+                  <button id="deleteFiles" class="btn inactive-btn">Delete</button>
+                </div>
+              </div>
+              <div class="title-settings-base">
+                <h3>Import</h3>
+                <select id="loadImportSelect" class="select-options-base">
+                </select>
+                <div class="flex-container">
+                  <button id="loadImportedFiles" class="btn">Load Import</button>
+                </div>
+              </div>
+            </div>
+            <textarea id="importTextarea" class="import-texarea"></textarea>
+            <div class="flex-container">
+              <button id="importProjectFiles" class="btn">Import</button>
+              <button id="exportOneProjectFiles" class="btn">Export</button>
+              <button id="exportProjectFiles" class="btn">Export All</button>
+            </div>
+          </div>
+        </div>
+        <button class="close-btn-window close-btn-base btn">close</button>
+      </section>
     </div>
-    <script type="application/javascript" src="js/scripts.min.js"></script>
+    <header class="header-class">
+      <div class="left-header-btns">
+        <a class="logo" href="">
+        </a>
+        <button id="autoUpdate" class="inactive-btn">Auto</button>
+        <button class="fa fa-play fa-2x run-code btn">
+        </button>
+      </div>
+      <nav class="menu">
+        <h3>Go to main menu</h3>
+        <ul>
+          <li>
+            <button id="main-menu" class="btn">
+              <span class="toggle-small">
+                <span class="settings-title">Settings</span>
+              </span>
+            </button>
+            <ul class="small-sub">
+              <li id="layoutSettingsBtn">
+                Layout
+              </li>
+              <li id="cssSettingsBtn">
+                Css
+              </li>
+              <li id="javascriptSettingsBtn">
+                Javascript
+              </li>
+              <li id="projectsSettingsBtn">
+                Projects
+              </li>
+              <li id="exportSettingsBtn">
+                Export
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="wrapper">
+      <div class="left-col">
+        <section class="html">
+          <div id="htmlTitle" class="title">
+            <div id="copyButtonHtml" class="copy-btn-hidden"></div>
+            <h3 class="left">HTML</h3>
+            <div id="copiedHtml" class="success-copied">Succesfully Copied</div>
+            <ul class="small-menu right">
+              <li>
+                <span>
+                  <button class="toggle-small btn"></button>
+                </span>
+                <ul class="small-sub">
+                  <li id="copyHtml">
+                    Copy
+                  </li>
+                  <li id="formatHtmlCode">
+                    Format Code
+                  </li>
+                  <li class="full-screen">
+                    Full Screen
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <form class="innerbox">
+            <textarea id="htmlEditor" name="code" placeholder=""></textarea>
+          </form>
+        </section>
+        <section class="css">
+          <div id="cssTitle" class="title">
+            <div id="copyButtonCss" class="copy-btn-hidden"></div>
+            <div id="CMColorHidOne" class="copy-btn-hidden"></div>
+            <div id="CMColorHidTwo" class="copy-btn-hidden"></div>
+            <div id="CMColorHidThree" class="copy-btn-hidden"></div>
+            <div id="CMColorHidFour" class="copy-btn-hidden"></div>
+            <div id="CMColorHidFive" class="copy-btn-hidden"></div>
+            <h3 class="left">CSS</h3>
+            <div class="multiple-files">
+              <select id="optionCssFiles">
+                <option value="base">base</option>
+              </select>
+            </div>
+            <div id="copiedCSS" class="success-copied">Succesfully Copied</div>
+            <div id="CMColorPalette" class="cm-color-palette">
+              <div id="CMColorPaletteOne" class="color-pal"></div>
+              <div id="CMColorPaletteTwo" class="color-pal"></div>
+              <div id="CMColorPaletteThree" class="color-pal"></div>
+              <div id="CMColorPaletteFour" class="color-pal"></div>
+              <div id="CMColorPaletteFive" class="color-pal"></div>
+            </div>
+            <ul class="small-menu right">
+              <li>
+                <span>
+                  <button class="toggle-small btn"></button>
+                </span>
+                <ul class="small-sub">
+                  <li id="copyCss">
+                    Copy
+                  </li>
+                  <li id="playCodeCss" class="play-code">
+                    Play
+                  </li>
+                  <li class="add-new-file">
+                    new category
+                  </li>
+                  <li id="minFolderCssBtn">
+                    remove category
+                  </li>
+                  <li id="cssMoveUpCatBtn">
+                    move up
+                  </li>
+                  <li id="cssMoveDownCatBtn">
+                    move down
+                  </li>
+                  <li id="formatCssCode">
+                    Format Code
+                  </li>
+                  <li class="full-screen">
+                    Full Screen
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <form class="innerbox">
+            <textarea id="cssEditor" name="code" placeholder=""></textarea>
+          </form>
+        </section>
+        <section class="javascript">
+          <div id="jsTitle" class="title">
+            <div id="copyButtonJs" class="copy-btn-hidden"></div>
+            <div class="left">
+              <h3>JS</h3>
+              <button class="fa fa-play run-code run-code-small">
+              </button>
+            </div>
+            <div class="multiple-files">
+              <select id="optionJsFiles">
+                <option value="master">master</option>
+              </select>
+            </div>
+            <div id="copiedJs" class="success-copied">Succesfully Copied</div>
+            <ul class="small-menu right">
+              <li>
+                <span>
+                  <button class="toggle-small btn"></button>
+                </span>
+                <ul class="small-sub">
+                  <li id="copyJs">
+                    Copy
+                  </li>
+                  <li class="add-new-file">
+                    new category
+                  </li>
+                  <li id="minFolderJsBtn">
+                    remove category
+                  </li>
+                  <li id="jsMoveUpCatBtn">
+                    move up
+                  </li>
+                  <li id="jsMoveDownCatBtn">
+                    move down
+                  </li>
+                  <li id="formatJsCode">
+                    Format Code
+                  </li>
+                  <li class="full-screen">
+                    Full Screen
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <form class="innerbox">
+            <textarea id="jsEditor" name="code" placeholder=""></textarea>
+          </form>
+        </section>
+      </div>
+      <div id="splitter" class="splitter">
+        <dis id="splitterHidden" class="splitter-hidden"></dis>
+      </div>
+      <aside id="right-col" class="right-col">
+        <h3 class="preview-title">Preview</h3>
+        <div id="iframeRuler" class="iframe-ruler"></div>
+        <div id="iframeWidth" class="iframe-width"></div>
+        <iframe id="live_update"></iframe>
+      </aside>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <div id="infoWindowBtn" aria-label="Go to information window" class="fa fa-info-circle fa-2x info">
+        </div>
+      </div>
+      <div class="footer-class-buttons">
+        <button id="htmlBut" class="btn">Html</button>
+        <button id="cssBut" class="btn">Css</button>
+        <button id="javascriptBut" class="btn">JS</button>
+      </div>
+    </footer>
+  </div>
+  <script type="application/javascript" src="js/scripts.min.js"></script>
 </body>
 
 </html>
